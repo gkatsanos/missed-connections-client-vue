@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brandheader has the expected html structure 1`] = `
+<nav class="primary toolbar toolbar--fixed theme--dark" style="margin-top: 0px; padding-left: 0px; padding-right: 0px;">
+    <div class="toolbar__content" style="height: 56px;">
+        <div class="toolbar__title">Missed Connections</div>
+        <div class="spacer"></div>
+        Georgios
+        <div class="menu" style="display: inline-block;">
+            <div class="menu__activator"><button type="button" class="btn btn--icon btn--raised theme--dark" data-ripple="true"><div class="btn__content"><i class="material-icons icon icon--large theme--dark">account_circle</i></div></button></div>
+            <div class="menu__content" style="max-height: auto; min-width: 0px; max-width: auto; top: 12px; left: 0px; z-index: 0; display: none;">
+                <ul data-uid="7" class="list">
+                    <li>
+                        <div class="list__tile list__tile--avatar">
+                            <div class="avatar list__tile__avatar" style="height: 48px; width: 48px;"><i class="material-icons icon icon--medium">account_circle</i></div>
+                            <div class="list__tile__content">
+                                <div class="list__tile__title">Georgios Katsanos</div>
+                                <div class="list__tile__sub-title">gkatsanos@gmail.com</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-uid="9" class="list">
+                    <li>
+                        <div class="list__tile"><button type="button" class="btn btn--block btn--raised btn--small primary" data-ripple="true"><div class="btn__content">Logout
+        </div></button></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <!---->
+    </div>
+</nav>
+`;

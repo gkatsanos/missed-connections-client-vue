@@ -5,9 +5,11 @@
   "author": "George Katsanos <george@gplus.gr>",
   "private": false,
   "scripts": {
+    "preinstall": "npm install -g yarn",
     "precommit": "yarn lint",
     "dev": "node build/dev-server.js",
-    "start": "yarn build:production",
+    "start": "serve -s dist",
+    "postinstall": "yarn build:production",
     "build:production": "node build/build.js",
     "test": "jest --coverage",
     "test:watch": "yarn test --watchAll",
@@ -86,7 +88,7 @@
   },
   "engines": {
     "node": "^8.0.0",
-    "yarn": "^1.2.0",
+    "yarn": "^1.2.1",
     "npm": "^5.0.0"
   },
   "browserslist": [

@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ?
+  'https://isawyou-server.herokuapp.com/' :
+  'http://localhost:3000/';
+
 const fetchItems = (page, token) => (
-  axios(`http://localhost:3000/message/list/page/${page}`, {
+  axios(`message/list/page/${page}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -10,7 +14,7 @@ const fetchItems = (page, token) => (
 );
 
 const registerUser = data => (
-  axios.post('http://localhost:3000/auth/register', data)
+  axios.post('auth/register', data)
     .then(response => response.data)
     .catch((err) => {
       throw err;
@@ -18,12 +22,12 @@ const registerUser = data => (
 );
 
 const login = data => (
-  axios.post('http://localhost:3000/auth/login', data)
+  axios.post('auth/login', data)
     .then(response => response.data)
 );
 
 const authenticate = activationId => (
-  axios(`http://localhost:3000/auth/${activationId}`)
+  axios(`auth/${activationId}`)
     .then(response => response.data)
 );
 

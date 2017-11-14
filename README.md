@@ -24,48 +24,6 @@ yarn unit
 yarn test
 ```
 
-## Build Setup for Server
+## Server
 
-``` bash
-# go to ./server/
-
-# install dependencies
-yarn
-
-# start dev server
-yarn dev
-
-# start production server
-yarn start
-
-# lint code with ESLint
-yarn lint
-
-# try to fix ESLint errors
-yarn lint:fix
-
-# lint and watch for changes
-yarn lint:watch
-
-# run all tests with Mocha
-yarn test
-
-# run unit tests
-yarn test:unit
-
-# run integration tests
-yarn test:integration
-
-# run all tests and watch for changes
-yarn test:watch
-
-# open nyc test coverage reports
-yarn coverage
-
-# show logs in production
-pm2 logs
-
-# generate and open api documentation
-yarn docs
-
-```
+Check https://github.com/gkatsanos/isawyou-server

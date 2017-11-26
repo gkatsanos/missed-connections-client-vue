@@ -10,7 +10,7 @@
     "start": "serve -s dist",
     "postinstall": "yarn build:production",
     "build:production": "NODE_ENV=production node ./build/build.js",
-    "test": "jest --coverage",
+    "test": "NODE_ENV=test jest --coverage",
     "test:watch": "yarn test --watchAll",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "yarn lint --fix",

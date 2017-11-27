@@ -21,4 +21,5 @@ deploy:
   app: isawyou-client
   on:
     repo: gkatsanos/isawyou-client
-after_success: yarn coverage
+script:
+  - yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

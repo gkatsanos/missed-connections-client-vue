@@ -10,16 +10,12 @@ branches:
 env:
   global:
   - NODE_ENV=test
-script: yarn test
+script:
+- yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 before_install: yarn global add greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 deploy:
   provider: heroku
   api_key:
-    secure: eRZaGNpHk10KEuLpFnz/q4sjQQn+6TrOQo9e0TbSwuWPkx8N1GGeqA0JedOCaLsyeiy6Uo+CydOMOucPuASR+NqEx37CF8Q3Z7fp1SJdIP67cpTcqj6sn61B095xLJriI3W3huCSn4/7wEX8AFNAw795wjjveYBBJG5vMhfS14OFTLwmd2lPHRCfH92CEpVui5dapboy64CKIOtwDch2XYiDMRCe49fs1nlRXN8DqQHY1we8XVUxI3NEG8SS5a80f547yr0KgvZTFeQ+lYPM2GpNW3yInUznmnFrX2/t2PRCPVYOvk2fGQyCsbVbPJq/aElQkugMR7jxI8xG06Zf0vEK3PWySD/GPcy86X8v3WdlXw21G6Z6sNsZK/f7GTVd5twpHYP8EM3b2M7V/Bl73GqFRD7tdCsMOrBUBFB9ZeT+Pmht9DZRv7Mbk09DwjRUqALmMBe81lOTewMyqKb+lNBGvwxbFTs9FgeMkLMQG/0bIB+RjsB5413++FLKV21fk5H3PXnlG2S0rX6XqqBmw6fUa/FbXRmTVcS5zyogHzMul56J8r0EOBxtZ1J/q9GPJ5DTKA1bqPjPe5n+v0b2Z9iRGiyJBq/Wr5181p7Z3PO/WxPkIqtQf+NCDmwxBs5GOIso0l13DCOr+XzHOnqo30imrG0NwFMIg7yW1ydAaAE=
-  app: isawyou-client
-  on:
-    repo: gkatsanos/isawyou-client
-script:
-  - yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+    secure: sMVGGfPiuFiToI+l8+HCD2EMMlsNI6uZ+e5foKHJsHPICLJ4P0xFQofUHVCNCegz3Mi9VXP/WiMjjLLn8f9CASzlHmjDaO2katMHV1RcCA52Ulu6BamGEqewKJLe2tAZEcws1fOpy9neVnzHOwZwFyMIhizF08fLlPcfevxyfl+rBzJL57PqEXwbjAxlLkIXg1qk3Vc/PgiAbxb0iacs92zHdkH/9Nlb9LPeJ39B2QPkeLcAPyMeDez1DbB9Aidan3bYHY2tacvbi6yPQqDirAr9zYEQBvI7SN5RaSspEUw75OiLRERCXny2aLKVME3SOxFTJ01GhbiBbaL8MjXTpuYsdyyhLZg67e0QDD1tGRxUwPtM06fDYmryqw2uuYB/NhPcj/AHAVhtj00hmBxqFugY8LThb6Y8tIy14lyfKi7W6TjWis6GHI5r6U9ZjiADRo45S9aSe1766cebjEAJf4PailPlXueBPuVtj+CYIlQjcTL//5S9n8Z+5B0gDLMEbSF4WTwLYZBDNmPfVRf+dmUKrIkkcDXCSjEgApp/DIW6xrIganZQBPaHF8TTcDcoWqxIPtuKGhFiBXQIVfxCt5nHUaqewuUFpVKl0yHJpdZv6Jg/G7ZNIazzmtdd7s9wxe1/rQYIamyS2WIj8jb1lGEYxtvflzYxlYXn7752EN0=

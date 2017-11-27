@@ -1,0 +1,24 @@
+language: node_js
+node_js: '8'
+cache: yarn
+git:
+  depth: 3
+branches:
+  only:
+  - master
+  - "/^greenkeeper/.*$/"
+env:
+  global:
+  - NODE_ENV=test
+script: yarn test
+before_install: yarn global add greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+deploy:
+  provider: heroku
+  api_key:
+    secure: eRZaGNpHk10KEuLpFnz/q4sjQQn+6TrOQo9e0TbSwuWPkx8N1GGeqA0JedOCaLsyeiy6Uo+CydOMOucPuASR+NqEx37CF8Q3Z7fp1SJdIP67cpTcqj6sn61B095xLJriI3W3huCSn4/7wEX8AFNAw795wjjveYBBJG5vMhfS14OFTLwmd2lPHRCfH92CEpVui5dapboy64CKIOtwDch2XYiDMRCe49fs1nlRXN8DqQHY1we8XVUxI3NEG8SS5a80f547yr0KgvZTFeQ+lYPM2GpNW3yInUznmnFrX2/t2PRCPVYOvk2fGQyCsbVbPJq/aElQkugMR7jxI8xG06Zf0vEK3PWySD/GPcy86X8v3WdlXw21G6Z6sNsZK/f7GTVd5twpHYP8EM3b2M7V/Bl73GqFRD7tdCsMOrBUBFB9ZeT+Pmht9DZRv7Mbk09DwjRUqALmMBe81lOTewMyqKb+lNBGvwxbFTs9FgeMkLMQG/0bIB+RjsB5413++FLKV21fk5H3PXnlG2S0rX6XqqBmw6fUa/FbXRmTVcS5zyogHzMul56J8r0EOBxtZ1J/q9GPJ5DTKA1bqPjPe5n+v0b2Z9iRGiyJBq/Wr5181p7Z3PO/WxPkIqtQf+NCDmwxBs5GOIso0l13DCOr+XzHOnqo30imrG0NwFMIg7yW1ydAaAE=
+  app: isawyou-client
+  on:
+    repo: gkatsanos/isawyou-client
+after_success: yarn coverage

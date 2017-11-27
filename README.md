@@ -1,4 +1,6 @@
-# isawyou
+# The Client
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/gkatsanos/isawyou-client.svg?branch=master)](https://travis-ci.org/gkatsanos/isawyou-client)
+[![Coverage Status](https://coveralls.io/repos/github/gkatsanos/isawyou-client/badge.svg?branch=master)](https://coveralls.io/github/gkatsanos/isawyou-client?branch=master)
 
 A Vue.js / Express.js / MongoDB based SPA.
 

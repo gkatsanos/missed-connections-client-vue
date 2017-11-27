@@ -1,0 +1,8 @@
+version: "3"
+services:
+  client:
+    image: gkatsanos/client
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules/

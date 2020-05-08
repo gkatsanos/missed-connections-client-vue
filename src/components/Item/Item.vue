@@ -6,7 +6,7 @@
       <v-card-title primary-title>
         <div>
           me: {{ formatSex(item.mySex) }}, you: {{ formatSex(item.yourSex) }}
-          {{ item.category.name }}
+          {{ item.category && item.category.name }}
           {{ item.body }}
           {{ item.username }}
         </div>

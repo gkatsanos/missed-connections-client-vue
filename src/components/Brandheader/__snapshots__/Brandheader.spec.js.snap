@@ -7,7 +7,9 @@ exports[`Brandheader has the expected html structure 1`] = `
         <div class="spacer"></div>
         Georgios
         <div class="menu" style="display: inline-block;">
-            <div class="menu__activator"><button type="button" class="btn btn--icon btn--raised theme--dark" data-ripple="true"><div class="btn__content"><i class="material-icons icon icon--large theme--dark">account_circle</i></div></button></div>
+            <div class="menu__activator"><button type="button" class="btn btn--icon btn--raised theme--dark" data-ripple="true">
+                    <div class="btn__content"><i class="material-icons icon icon--large theme--dark">account_circle</i></div>
+                </button></div>
             <div class="menu__content" style="max-height: auto; min-width: 0px; max-width: auto; top: 12px; left: 0px; z-index: 0; display: none;">
                 <ul data-uid="7" class="list">
                     <li>
@@ -22,8 +24,10 @@ exports[`Brandheader has the expected html structure 1`] = `
                 </ul>
                 <ul data-uid="9" class="list">
                     <li>
-                        <div class="list__tile"><button type="button" class="btn btn--block btn--raised btn--small primary" data-ripple="true"><div class="btn__content">Logout
-        </div></button></div>
+                        <div class="list__tile"><button type="button" class="btn btn--block btn--raised btn--small primary" data-ripple="true">
+                                <div class="btn__content">Logout
+                                </div>
+                            </button></div>
                     </li>
                 </ul>
             </div>

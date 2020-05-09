@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' ?
-  'https://boilerplate-server.herokuapp.com/' :
+  'https://missed-connections-server.herokuapp.com/' :
   'http://localhost:3000/';
 
 const fetchItems = (page, token) => (

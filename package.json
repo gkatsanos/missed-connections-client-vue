@@ -10,8 +10,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production node ./build/build.js",
-    "dev": "yarn webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "postinstall": "yarn build",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --config build/webpack.dev.conf.js",
     "start": "serve -s dist",
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "yarn test --watchAll",

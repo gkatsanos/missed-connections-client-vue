@@ -28,7 +28,7 @@
   "dependencies": {
     "concurrently": "^3.5.0",
     "popper.js": "^1.12.3",
-    "serve": "^6.4.1",
+    "serve": "^10.1.2",
     "vee-validate": "^2.0.0-rc.14",
     "vue": "^2.5.3",
     "vue-router": "3.0.1",
